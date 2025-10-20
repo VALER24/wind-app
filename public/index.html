@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wind Forecast Graph</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Wind Forecast Viewer</h1>
+
+  <div class="controls">
+    <label>Latitude: <input id="lat" type="number" value="42.852"></label>
+    <label>Longitude: <input id="lon" type="number" value="-91.41"></label>
+    <label>Model:
+      <select id="model">
+        <option value="ecmwf_ifs">ECMWF</option>
+        <option value="gfs_seamless">GFS</option>
+      </select>
+    </label>
+    <button id="load">Load Forecast</button>
+  </div>
+<div class="chart-container">
+  <canvas id="windChart"></canvas>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
