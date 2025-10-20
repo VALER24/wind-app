@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    background: #161b22;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: #c9d1d9;
+  }
+  
+  input,
+  select {
+    background: #0d1117;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 5px;
+  }
+  
+  button {
+    background: #238636;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #2ea043;
+  }
+  
+  canvas {
+    width: 100% !important;
+    max-width: 800px;
+    height: auto !important;
+    background: #161b22;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  /* Put this below canvas rules */
+  .chart-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    position: relative;
+    height: 45vh; /* default height for medium screens (in viewport height) */
+  }
+  
+  
+  @media (max-width: 600px) {
+    .chart-container {
+        height: 100vh; /* taller for mobile devices */
+      }
+    h1 {
+      font-size: 1.5rem;
+    }
+    label {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .chart-container {
+      height: 40vh;
+    }
+  }
